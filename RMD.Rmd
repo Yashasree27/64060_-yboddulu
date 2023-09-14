@@ -1,0 +1,38 @@
+---
+title: "FML_assignment"
+author: "Yashasree Bodduluri"
+date: "2023-09-10"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+#Data Importing
+```{r}
+library(readr)
+yashu = read.csv("C:/Users/HP/Desktop/FML Dataset.csv")
+yashu
+```
+
+#2.Descriuptive Analytics
+```{r}
+summary(yashu)
+str(yashu)
+```
+#3.Log Transformation
+```{r}
+yash = log(yashu$Total.Library.Size)
+yash
+```
+
+#4.Histogram
+```{r}
+hist(yashu$Total.Library.Size,xlab = "Library_Size")
+```
+
+#5.ScatterPlot
+```{r}
+x=yashu$Total.Library.Size
+y=yashu$No..of.TV.Shows
+plot(x,y,xlab = "Total_library_size",ylab = "No_of_Tv_shows", main = "LibrarySize-TvShows(ScatterPlot)")
+```
